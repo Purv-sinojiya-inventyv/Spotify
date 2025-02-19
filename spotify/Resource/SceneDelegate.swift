@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if isLoggedIn {
             // Load Home Screen
             initialViewController = storyboard.instantiateViewController(
-                withIdentifier: "TabBarViewController")
+                withIdentifier: "TabBarController")
         } else {
             // Load Login Screen
             initialViewController = storyboard.instantiateViewController(

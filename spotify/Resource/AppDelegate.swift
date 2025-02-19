@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let initialViewController =
       isLoggedIn
       ? storyboard.instantiateViewController(
-        withIdentifier: "TabBarViewController")
+        withIdentifier: "TabBarController")
       : storyboard.instantiateViewController(
         withIdentifier: "WelcomeViewController")
     let rootViewController = UINavigationController(

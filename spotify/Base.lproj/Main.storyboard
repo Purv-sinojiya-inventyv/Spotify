@@ -151,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="2897" y="-354"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="PyX-hz-Ab3">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" id="20l-7A-ai7" customClass="TabBarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="20l-7A-ai7" customClass="TabBarController" customModule="spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bte-ZX-ZJx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

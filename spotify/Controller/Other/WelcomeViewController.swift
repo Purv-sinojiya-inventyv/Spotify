@@ -29,7 +29,7 @@ class WelcomeViewController: UIViewController {
           {
             let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
 
-              let homeVC = storyboard.instantiateViewController(identifier: "TabBarViewController") as! TabBarViewController
+              let homeVC = storyboard.instantiateViewController(identifier: "TabBarController") as! TabBarController
             scene.windows.first?.rootViewController = homeVC
           } else {
             self.signInFailed()

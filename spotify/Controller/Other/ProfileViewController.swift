@@ -1,38 +1,31 @@
-//
-//  ProfileViewController.swift
-//  spotify
-//
-//  Created by Purv Sinojiya on 14/02/25.
-//
-
 import UIKit
 
 class ProfileViewController: UIViewController {
     
+    private var profile: UserProfile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        APICaller.shared.getCurrentUserProfile{ result in
-            switch result {
-            case .success(let model):
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-                
+        view.backgroundColor = .systemBackground
+        fetchUserProfile()
+    }
+    
+    private func fetchUserProfile() {
+        APICaller.shared.getCurrentUserProfile { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let profile):
+                    self?.profile = profile
+                    self?.updateUI()
+                case .failure(let error):
+                    print("🚨 Failed to fetch profile:", error.localizedDescription)
+                }
             }
-            // Do any additional setup after loading the view.
         }
     }
-}
-        
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     
+    private func updateUI() {
+        guard let profile = profile else { return }
+        print("👤 User Profile:", profile)
+    }
+}
