@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEa-PQ-RdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.0534351145038" y="253.52112676056339"/>
+            <point key="canvasLocation" x="2029.7709923664122" y="253.52112676056339"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cvD-lU-8ul">
@@ -110,42 +110,46 @@
                     <view key="view" contentMode="scaleToFill" id="Xyc-p6-W70">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ft4-b7-Izm">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <color key="barTintColor" systemColor="systemGreenColor"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textShadowColor" systemColor="systemGreenColor"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" systemColor="systemGreenColor"/>
-                                    <color key="textShadowColor" systemColor="systemGreenColor"/>
-                                </textAttributes>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7o-H1-RHy">
-                                <rect key="frame" x="16" y="45" width="209" height="105"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Spotify">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="43"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="geI-XC-z6E"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="LjX-xg-3Kr"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bEM-MY-XgK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" style="done" id="xVd-Pu-afm">
+                            <connections>
+                                <action selector="settingbutton:" destination="jJv-Or-Mel" id="qXz-Zp-cQ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXB-dt-1fA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.0534351145038" y="-353.52112676056339"/>
+            <point key="canvasLocation" x="2029.7709923664122" y="-353.52112676056339"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="YSj-Mz-0YY">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="bKI-2P-shn" customClass="ProfileViewController" customModule="spotify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQ6-yZ-O28">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtU-5p-jy6">
+                                <rect key="frame" x="16" y="7" width="393" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Profile" id="DRq-j3-GL5"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ab4-hw-8BU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vp-8W-1YB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="-354"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="PyX-hz-Ab3">
@@ -157,7 +161,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="jJv-Or-Mel" kind="relationship" relationship="viewControllers" id="dEM-2k-W0d"/>
+                        <segue destination="Kfi-uF-P6W" kind="relationship" relationship="viewControllers" id="dEM-2k-W0d"/>
                         <segue destination="dfK-9I-Nfg" kind="relationship" relationship="viewControllers" id="Qen-qR-6Qd"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="kPa-6X-e7B"/>
                     </connections>
@@ -236,8 +240,28 @@
             </objects>
             <point key="canvasLocation" x="-677.0992366412213" y="1091.549295774648"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jAY-jP-8r4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kfi-uF-P6W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="LjX-xg-3Kr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="W7N-54-Gci">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jJv-Or-Mel" kind="relationship" relationship="rootViewController" id="osF-b1-jXQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4Q-l6-35H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103.0534351145038" y="-353.52112676056339"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>

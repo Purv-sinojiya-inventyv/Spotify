@@ -36,7 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     rootViewController.navigationBar.isHidden = true
     window?.rootViewController = rootViewController
     window?.makeKeyAndVisible()
-
+      AuthManager.shared.refreshAccessTokenIfNeeded{success in
+          print(success)
+      }
     return true
   }
 
