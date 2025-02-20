@@ -11,9 +11,10 @@ class ViewController: UIViewController {
  
     @IBAction func settingbutton(_ sender: UIBarButtonItem) {
         let vc = self.storyboard?.instantiateViewController(
-            identifier: "ProfileViewController") as! ProfileViewController
+            identifier: "SettingViewController") as! SettingViewController
         self.navigationController?.pushViewController(
             vc, animated: true)
+        
     }
     
   

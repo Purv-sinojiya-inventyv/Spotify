@@ -43,14 +43,17 @@ final class APICaller {
                     completion(.failure(APIError.failedToGetData))
                     return
                 }
+                print(data)
 
                 do {
                     let userProfile = try JSONDecoder().decode(UserProfile.self, from: data)
                     completion(.success(userProfile))
+                  
                 } catch {
                     print("🚨 JSON Parsing Error:", error)
                     completion(.failure(error))
                 }
+              
             }
             task.resume()
         }

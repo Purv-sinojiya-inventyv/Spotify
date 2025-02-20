@@ -103,18 +103,19 @@
             </objects>
             <point key="canvasLocation" x="2029.7709923664122" y="253.52112676056339"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="cvD-lU-8ul">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="jJv-Or-Mel" customClass="ViewController" customModule="spotify" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xyc-p6-W70">
+                    <navigationBar key="view" contentMode="scaleToFill" id="OTM-nI-KhD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="geI-XC-z6E"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <items>
+                            <navigationItem title="Title" id="FrH-b7-JSH"/>
+                        </items>
+                    </navigationBar>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="bEM-MY-XgK">
+                    <navigationItem key="navigationItem" title="Home" style="editor" id="bEM-MY-XgK">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" style="done" id="xVd-Pu-afm">
                             <connections>
                                 <action selector="settingbutton:" destination="jJv-Or-Mel" id="qXz-Zp-cQ0"/>
@@ -127,29 +128,89 @@
             </objects>
             <point key="canvasLocation" x="2029.7709923664122" y="-353.52112676056339"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Setting View Controller-->
         <scene sceneID="YSj-Mz-0YY">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="bKI-2P-shn" customClass="ProfileViewController" customModule="spotify" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uQ6-yZ-O28">
+                <viewController storyboardIdentifier="SettingViewController" id="bKI-2P-shn" customClass="SettingViewController" customModule="spotify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="top" id="uQ6-yZ-O28">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtU-5p-jy6">
-                                <rect key="frame" x="16" y="7" width="393" height="96"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Profile" id="DRq-j3-GL5"/>
-                                </items>
-                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="settingcell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aMP-lX-uyS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell" id="gtv-Ve-F7c">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SettingCell" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gtv-Ve-F7c" id="icR-he-JOB" customClass="UITableView">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ab4-hw-8BU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aMP-lX-uyS" firstAttribute="top" secondItem="Ab4-hw-8BU" secondAttribute="top" id="FmP-Qa-Jbh"/>
+                            <constraint firstItem="Ab4-hw-8BU" firstAttribute="trailing" secondItem="aMP-lX-uyS" secondAttribute="trailing" id="qpL-LS-r65"/>
+                            <constraint firstItem="aMP-lX-uyS" firstAttribute="leading" secondItem="Ab4-hw-8BU" secondAttribute="leading" id="vvi-u3-89I"/>
+                            <constraint firstItem="Ab4-hw-8BU" firstAttribute="bottom" secondItem="aMP-lX-uyS" secondAttribute="bottom" id="wZg-Qm-Vd4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="aMP-lX-uyS" id="ltS-ua-mjn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Vp-8W-1YB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2897" y="-354"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="V1V-St-6wO">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="gdD-pL-zyp" customClass="ProfileViewController" customModule="spotify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pey-T3-jCb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ynx-RR-sur">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCell" id="6s8-dh-KnR" customClass="ProfileTableViewCell" customModule="spotify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6s8-dh-KnR" id="c0m-bG-JfH">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gdD-pL-zyp" id="w5c-GD-cUR"/>
+                                    <outlet property="delegate" destination="gdD-pL-zyp" id="aP1-XR-hTe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CZC-9V-w16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CZC-9V-w16" firstAttribute="trailing" secondItem="ynx-RR-sur" secondAttribute="trailing" id="JkF-LC-pjX"/>
+                            <constraint firstItem="CZC-9V-w16" firstAttribute="bottom" secondItem="ynx-RR-sur" secondAttribute="bottom" id="ogQ-vr-Q8x"/>
+                            <constraint firstItem="ynx-RR-sur" firstAttribute="top" secondItem="CZC-9V-w16" secondAttribute="top" id="pxK-Wo-aHC"/>
+                            <constraint firstItem="ynx-RR-sur" firstAttribute="leading" secondItem="CZC-9V-w16" secondAttribute="leading" id="tXg-qj-vFY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tablevVew" destination="ynx-RR-sur" id="mV6-pS-udW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkb-vc-s1x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3872.5190839694656" y="-354.22535211267609"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PyX-hz-Ab3">
@@ -251,6 +312,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u17-PJ-v0r">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="jJv-Or-Mel" kind="relationship" relationship="rootViewController" id="osF-b1-jXQ"/>
                     </connections>
@@ -266,16 +330,16 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
