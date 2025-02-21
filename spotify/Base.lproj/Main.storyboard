@@ -118,7 +118,7 @@
                     <navigationItem key="navigationItem" title="Home" style="editor" id="bEM-MY-XgK">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" style="done" id="xVd-Pu-afm">
                             <connections>
-                                <action selector="settingbutton:" destination="jJv-Or-Mel" id="qXz-Zp-cQ0"/>
+                                <action selector="settingButtonTapped:" destination="jJv-Or-Mel" id="Lx2-Ae-0gv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
